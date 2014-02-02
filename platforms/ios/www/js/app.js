@@ -6,13 +6,14 @@
 		// var adapter = new WebSqlAdapter();
     adapter.initialize().done(function () {
         console.log("Data adapter initialized");
+				renderHomeView();
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
-    $('.search-key').on('keyup', findByName);
-    $('.help-btn').on('click', function() {
-        alert("Some help here...")
-    });
+    // $('.search-key').on('keyup', findByName);
+    // $('.help-btn').on('click', function() {
+    //     alert("Some help here...")
+    // });
 		
     document.addEventListener('deviceready', function () {
 			FastClick.attach(document.body);
@@ -41,5 +42,14 @@
             }
         });
     }
+		
+		function renderHomeView() {
+			var html = 
+				"<h1>Directory</h1>" +
+				"<input class='search-key' type='search' placeholder='Enter name'/>" +
+				"<ul class='employee-list'></ul>";
+			$('body').html(html);
+			$('.search-key').on('keyup', findByName);
+		}
 
 }());
