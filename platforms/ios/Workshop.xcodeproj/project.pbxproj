@@ -44,6 +44,7 @@
 		7F3CCC1AA60246428A79F42E /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A18854E54538405C9B2EDAE7 /* CDVNotification.m */; };
 		1326DDAC432B4E398EFE63F0 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9AEED60A61141A993BAEEF1 /* CDVNotification.bundle */; };
 		D80364F1BC1A413D891265A3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844D1C330D4B413E80410829 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		170C9ADB67074B278B499B22 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB969D659364E838C61F524 /* CDVLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		8870CD14007C41329B788F52 /* CDVNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVNotification.h"; path = "org.apache.cordova.dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		E9AEED60A61141A993BAEEF1 /* CDVNotification.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; };
 		844D1C330D4B413E80410829 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		8BB969D659364E838C61F524 /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "org.apache.cordova.geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		A5AD2E8AE1604FA2BE5ED1CD /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "org.apache.cordova.geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +243,8 @@
 				796ADFA27616494BAA9E51B2 /* CDVLogger.h */,
 				A18854E54538405C9B2EDAE7 /* CDVNotification.m */,
 				8870CD14007C41329B788F52 /* CDVNotification.h */,
+				8BB969D659364E838C61F524 /* CDVLocation.m */,
+				A5AD2E8AE1604FA2BE5ED1CD /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = "Workshop/Plugins";
@@ -429,6 +434,7 @@
 				BCBED619C8FC4EFDB31EF6D8 /* CDVDevice.m in Sources */,
 				11DB84822B8F4200A2B27A94 /* CDVLogger.m in Sources */,
 				7F3CCC1AA60246428A79F42E /* CDVNotification.m in Sources */,
+				170C9ADB67074B278B499B22 /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
