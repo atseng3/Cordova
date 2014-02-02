@@ -1,15 +1,16 @@
 // We use an "Immediate Function" to initialize the application to avoid leaving anything behind in the global scope
 (function () {
 	
-	var homeTpl = Handlebars.compile($("#home-tpl").html());
-	var employeeLiTpl = Handlebars.compile($("#employee-li-tpl").html());
+
 
     /* ---------------------------------- Local Variables ---------------------------------- */
+		var homeTpl = Handlebars.compile($("#home-tpl").html());
+		var employeeLiTpl = Handlebars.compile($("#employee-li-tpl").html());
     var adapter = new MemoryAdapter();
-		// var adapter = new WebSqlAdapter();
     adapter.initialize().done(function () {
-        console.log("Data adapter initialized");
-				renderHomeView();
+        // console.log("Data adapter initialized");
+				// renderHomeView();
+				$('body').html(new HomeView(adapter, homeTpl, employeeLiTpl).render().el);
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
@@ -34,10 +35,10 @@
 
 
     /* ---------------------------------- Local Functions ---------------------------------- */
-    function findByName() {
-			adapter.findByName($('.search-key').val()).done(function(employees){
-				$('.employee-list').html(employeeLiTpl(employees));
-			});
+			//     function findByName() {
+			// adapter.findByName($('.search-key').val()).done(function(employees){
+			// 	$('.employee-list').html(employeeLiTpl(employees));
+			// });
         // adapter.findByName($('.search-key').val()).done(function (employees) {
         //     var l = employees.length;
         //     var e;
@@ -47,15 +48,15 @@
         //         $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
         //     }
         // });
-    }
+    // }
 		
-		function renderHomeView() {			
-			// var html = 
-			// 	"<h1>Directory</h1>" +
-			// 	"<input class='search-key' type='search' placeholder='Enter name'/>" +
-			// 	"<ul class='employee-list'></ul>";
-			$('body').html(homeTpl());
-			$('.search-key').on('keyup', findByName);
-		}
+		// function renderHomeView() {			
+		// 	// var html = 
+		// 	// 	"<h1>Directory</h1>" +
+		// 	// 	"<input class='search-key' type='search' placeholder='Enter name'/>" +
+		// 	// 	"<ul class='employee-list'></ul>";
+		// 	$('body').html(homeTpl());
+		// 	$('.search-key').on('keyup', findByName);
+		// }
 
 }());
